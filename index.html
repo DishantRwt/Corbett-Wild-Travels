@@ -143,7 +143,26 @@
 
 <section><div class="container"><div class="section-head"><div class="eyebrow">Photo moments</div><h2 data-en="The Corbett feeling" data-hi="कॉर्बेट की खूबसूरती">The Corbett feeling</h2></div>
   
-<div class="gallery">
+<div class="..gallery{
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;
+  grid-template-rows:180px 180px;
+  gap:12px;
+}
+.gallery a{
+  display:block;
+  min-width:0;
+  min-height:0;
+  overflow:hidden;
+  border-radius:14px;
+}
+.gallery a img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.gallery a:first-child{grid-row:span 2}">
   <a href="safari-jeep-tiger.jpg" target="_blank">
     <img src="safari-jeep-tiger.jpg" alt="Tiger with Safari Jeep">
   </a>
