@@ -3,8 +3,8 @@
 //    digits only. Example for India: 919876543210
 // 2) Replace DISPLAY_PHONE and DISPLAY_EMAIL with your real business contacts.
 const WHATSAPP_NUMBER = "917668586808";
-const DISPLAY_PHONE = "+91 76685 86808";
-const DISPLAY_EMAIL = "Add your email address";
+const DISPLAY_PHONE = "";
+const DISPLAY_EMAIL = "gr7278327@gmail.com";
 
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("displayPhone").textContent = DISPLAY_PHONE;
