@@ -35,7 +35,7 @@ document.getElementById("enquiryForm").addEventListener("submit", function(event
     "Hello Jim Corbett Tourism! I want to enquire about a trip.",
     `Name: ${value("name")}`,
     `Mobile: ${value("phone")}`,
-    `Travel date: ${value("date")}`,
+    `Travel date: ${value("date").split("-").reverse().join("-")}`,
     `Travellers: ${value("people")}`,
     `Requirement: ${value("service")}`,
     `Budget: ${value("budget") || "Not specified"}`,
