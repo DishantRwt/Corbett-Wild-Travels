@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Jim Corbett National Park with Corbett Jungle Safari. Discover safari zones, stays, packages and send a travel enquiry.">
+  <meta name="theme-color" content="#173c2b">
+  <title>Corbett Jungle Safari | Safari, Stays & Travel</title>
+  <style>
+    :root{--forest:#173c2b;--forest2:#24563d;--leaf:#8bbf65;--sand:#f5f1e7;--ink:#1c2921;--muted:#66736a;--white:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    a{color:inherit;text-decoration:none}.container{width:min(1140px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(23,60,43,.97);color:#fff;box-shadow:0 2px 12px #0002}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:72px}
+    .brand{font-weight:800;letter-spacing:.3px;font-size:1.12rem}.brand span{display:block;color:#c6e3a8;font-size:.68rem;letter-spacing:2px;text-transform:uppercase}
+    nav{display:flex;align-items:center;gap:22px;font-size:.92rem}nav a:hover{color:#c6e3a8}
+    .nav-actions{display:flex;align-items:center;gap:10px}.lang{border:1px solid #ffffff80;background:transparent;color:#fff;padding:8px 10px;border-radius:20px;cursor:pointer}
+    .menu{display:none;background:none;border:0;color:#fff;font-size:1.5rem}
+    .btn{display:inline-block;border:0;border-radius:30px;padding:12px 20px;background:var(--leaf);color:#102719;font-weight:700;cursor:pointer;transition:.2s}
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.04)}.btn.outline{background:transparent;border:1px solid #fff;color:#fff}
+    .hero{min-height:610px;display:grid;align-items:center;color:#fff;background:linear-gradient(90deg,rgba(7,25,17,.82),rgba(7,25,17,.26)),url('https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=2000&q=85') center/cover}
+    .hero-content{max-width:680px;padding:90px 0}.eyebrow{color:#c6e3a8;text-transform:uppercase;letter-spacing:3px;font-size:.78rem;font-weight:700}
+    h1{font-size:clamp(2.6rem,6vw,5rem);line-height:1.05;margin:16px 0}.hero p{font-size:1.15rem;max-width:580px;color:#f0f2ec}
+    .hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .trust{background:var(--sand);padding:18px 0}.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center}.trust strong{display:block;color:var(--forest);font-size:1.05rem}
+    section{padding:76px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 38px}.section-head h2{font-size:clamp(1.9rem,4vw,2.7rem);color:var(--forest);margin:0 0 10px}.section-head p{color:var(--muted);margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 8px 28px #172d1d14}.card img{width:100%;height:220px;object-fit:cover;display:block}.card-body{padding:22px}.card h3{margin:0 0 8px;color:var(--forest)}.card p{color:var(--muted);margin:0 0 14px}.tag{display:inline-block;background:#eaf2e3;color:#315a37;padding:5px 10px;border-radius:30px;font-size:.78rem;font-weight:700}
+    .about{background:var(--sand)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}.about-img{width:100%;height:410px;object-fit:cover;border-radius:20px}.about h2{color:var(--forest);font-size:2.3rem;line-height:1.15}.ticks{padding:0;list-style:none}.ticks li{margin:10px 0}.ticks li:before{content:"✓";color:#4c8b47;font-weight:bold;margin-right:10px}
+    .packages .card-body{min-height:220px}.price{font-size:1.35rem;font-weight:800;color:var(--forest)}
+    .booking{background:var(--forest);color:#fff}.booking .section-head h2{color:#fff}.booking .section-head p{color:#d7e1d8}.form{max-width:820px;margin:auto;background:#fff;color:var(--ink);padding:28px;border-radius:20px;display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:.88rem;font-weight:700;color:#405348}.field input,.field select,.field textarea{width:100%;padding:12px;border:1px solid #d8dfd9;border-radius:9px;font:inherit;background:#fff}.field textarea{min-height:100px;resize:vertical}.form .btn{grid-column:1/-1;font-size:1rem}
+    .notice{font-size:.83rem;color:#68776d;text-align:center;margin:14px auto 0;max-width:820px}
+    .gallery{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:180px 180px;gap:12px}.gallery img{width:100%;height:100%;object-fit:cover;border-radius:14px}.gallery img:first-child{grid-row:span 2}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}.contact-panel{background:var(--sand);padding:28px;border-radius:18px}.contact-panel h3{color:var(--forest);margin-top:0}
+    footer{background:#10291d;color:#dbe5dc;padding:35px 0}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.small{font-size:.85rem;color:#b6c6ba}
+    .whatsapp{position:fixed;right:20px;bottom:20px;z-index:30;background:#20b85a;color:#fff;padding:13px 18px;border-radius:40px;font-weight:700;box-shadow:0 6px 20px #0003}
+    @media(max-width:800px){nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--forest);padding:18px 4%;flex-direction:column;align-items:flex-start}nav.open{display:flex}.menu{display:block}.nav .btn{display:none}.cards{grid-template-columns:1fr 1fr}.about-grid,.contact-grid{grid-template-columns:1fr}.gallery{grid-template-rows:140px 140px}.hero{min-height:560px}}
+    @media(max-width:560px){.cards{grid-template-columns:1fr}.trust-grid{grid-template-columns:1fr}.form{grid-template-columns:1fr;padding:20px}.field.full,.form .btn{grid-column:auto}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:140px 140px 140px}.gallery img:first-child{grid-row:auto;grid-column:span 2}.hero-content{padding:70px 0}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">Corbett Jungle Safari<span>Into the wild · Uttarakhand</span></a>
+    <nav id="nav">
+      <a href="#home" data-en="Home" data-hi="होम">Home</a><a href="#safari" data-en="Safari" data-hi="सफारी">Safari</a>
+      <a href="#stays" data-en="Stay & Packages" data-hi="स्टे और पैकेज">Stay & Packages</a><a href="#about" data-en="About" data-hi="हमारे बारे में">About</a><a href="#contact" data-en="Contact" data-hi="संपर्क">Contact</a>
+    </nav>
+    <div class="nav-actions"><button class="lang" id="langBtn" type="button">हिन्दी</button><a class="btn" href="#booking" data-en="Enquire Now" data-hi="अभी पूछताछ करें">Enquire Now</a><button class="menu" id="menuBtn" aria-label="Open menu">☰</button></div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div class="eyebrow" data-en="Discover the wilderness of Uttarakhand" data-hi="उत्तराखंड के जंगलों को करीब से जानें">Discover the wilderness of Uttarakhand</div>
+    <h1 data-en="Your Corbett<br>Adventure Begins Here" data-hi="आपका कॉर्बेट<br>सफर यहीं से शुरू होता है">Your Corbett<br>Adventure Begins Here</h1>
+    <p data-en="Plan a memorable jungle escape with safari information, comfortable stays and local travel assistance." data-hi="सफारी की जानकारी, आरामदायक ठहरने की जगह और स्थानीय यात्रा सहायता के साथ यादगार जंगल सफर की योजना बनाएं।">Plan a memorable jungle escape with safari information, comfortable stays and local travel assistance.</p>
+    <div class="hero-buttons"><a class="btn" href="#booking" data-en="Plan Your Trip" data-hi="अपनी यात्रा प्लान करें">Plan Your Trip</a><a class="btn outline" href="#safari" data-en="Explore Safari" data-hi="सफारी देखें">Explore Safari</a></div>
+  </div>
+</section>
+
+<div class="trust"><div class="container trust-grid">
+  <div><strong data-en="Local travel assistance" data-hi="स्थानीय यात्रा सहायता">Local travel assistance</strong><span data-en="Helpful trip planning" data-hi="यात्रा की योजना में मदद">Helpful trip planning</span></div>
+  <div><strong data-en="Safari & stay enquiries" data-hi="सफारी और स्टे पूछताछ">Safari & stay enquiries</strong><span data-en="One place to enquire" data-hi="एक जगह पर पूछताछ">One place to enquire</span></div>
+  <div><strong data-en="Hindi + English support" data-hi="हिंदी + अंग्रेज़ी सहायता">Hindi + English support</strong><span data-en="Easy communication" data-hi="आसान बातचीत">Easy communication</span></div>
+</div></div>
+
+<section id="safari">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">Jungle experiences</div><h2 data-en="Explore Jim Corbett" data-hi="जिम कॉर्बेट को एक्सप्लोर करें">Explore Jim Corbett</h2><p data-en="Discover the region and enquire about permitted activities. Zone access and safari availability depend on official rules and dates." data-hi="क्षेत्र की खूबसूरती जानें और अनुमत गतिविधियों के बारे में पूछताछ करें। ज़ोन और सफारी की उपलब्धता आधिकारिक नियमों और तारीखों पर निर्भर करती है।">Discover the region and enquire about permitted activities. Zone access and safari availability depend on official rules and dates.</p></div>
+    <div class="cards">
+      <article class="card"><img src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=900&q=80" alt="Tiger in the wild"><div class="card-body"><span class="tag">Wildlife</span><h3 data-en="Jungle Safari" data-hi="जंगल सफारी">Jungle Safari</h3><p data-en="Get guidance on safari zones, permit process and planning your visit." data-hi="सफारी ज़ोन, परमिट प्रक्रिया और यात्रा की योजना के बारे में जानकारी पाएं।">Get guidance on safari zones, permit process and planning your visit.</p><a href="#booking"><b data-en="Ask about safari →" data-hi="सफारी पूछें →">Ask about safari →</b></a></div></article>
+      <article class="card"><img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=80" alt="Green forest"><div class="card-body"><span class="tag">Nature</span><h3 data-en="Nature & Birding" data-hi="प्रकृति और बर्डिंग">Nature & Birding</h3><p data-en="Enjoy forest landscapes, riverside views and nature-focused experiences." data-hi="जंगल के नज़ारे, नदी किनारे के दृश्य और प्रकृति से जुड़े अनुभवों का आनंद लें।">Enjoy forest landscapes, riverside views and nature-focused experiences.</p><a href="#booking"><b data-en="Plan an experience →" data-hi="अनुभव प्लान करें →">Plan an experience →</b></a></div></article>
+      <article class="card"><img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=900&q=80" alt="Wooden forest cottage"><div class="card-body"><span class="tag">Stay</span><h3 data-en="Resorts & Homestays" data-hi="रिसॉर्ट और होमस्टे">Resorts & Homestays</h3><p data-en="Tell us your dates and budget to enquire about nearby accommodation." data-hi="आस-पास ठहरने की जगहों के लिए अपनी तारीखें और बजट बताएं।">Tell us your dates and budget to enquire about nearby accommodation.</p><a href="#booking"><b data-en="Enquire about stay →" data-hi="स्टे के बारे में पूछें →">Enquire about stay →</a></b></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about"><div class="container about-grid">
+  <img class="about-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1100&q=85" alt="Sunlight through forest trees">
+  <div><div class="eyebrow">Welcome to the wild</div><h2 data-en="A refreshing escape into nature" data-hi="प्रकृति के बीच सुकून भरा सफर">A refreshing escape into nature</h2><p data-en="Corbett Jungle Safari helps travellers discover the Corbett region and make informed enquiries for safari, stays and local experiences. Share your travel plan and our team can get back to you." data-hi="Corbett Jungle Safari यात्रियों को कॉर्बेट क्षेत्र की जानकारी देने और सफारी, ठहरने व स्थानीय अनुभवों के लिए पूछताछ करने में मदद करता है। अपनी यात्रा की जानकारी भेजें, हमारी टीम आपसे संपर्क करेगी।">Corbett Jungle Safari helps travellers discover the Corbett region and make informed enquiries for safari, stays and local experiences. Share your travel plan and our team can get back to you.</p>
+  <ul class="ticks"><li data-en="Help planning your visit" data-hi="यात्रा की योजना में सहायता">Help planning your visit</li><li data-en="Safari and accommodation enquiries" data-hi="सफारी और ठहरने की पूछताछ">Safari and accommodation enquiries</li><li data-en="Useful information before you travel" data-hi="यात्रा से पहले उपयोगी जानकारी">Useful information before you travel</li></ul><a class="btn" href="#booking" data-en="Send an Enquiry" data-hi="पूछताछ भेजें">Send an Enquiry</a></div>
+</div></section>
+
+<section class="packages" id="stays"><div class="container">
+  <div class="section-head"><div class="eyebrow">Plan your getaway</div><h2 data-en="Trip ideas & packages" data-hi="यात्रा के आइडिया और पैकेज">Trip ideas & packages</h2><p data-en="Sample trip formats. Final price depends on dates, availability, group size and inclusions." data-hi="ये यात्रा के उदाहरण हैं। अंतिम कीमत तारीख, उपलब्धता, लोगों की संख्या और सुविधाओं पर निर्भर करेगी।">Sample trip formats. Final price depends on dates, availability, group size and inclusions.</p></div>
+  <div class="cards">
+    <article class="card"><img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=900&q=80" alt="Forest trail"><div class="card-body"><span class="tag" data-en="Short escape" data-hi="छोटी यात्रा">Short escape</span><h3 data-en="1 Night / 2 Days" data-hi="1 रात / 2 दिन">1 Night / 2 Days</h3><p data-en="A quick Corbett break with stay enquiry and optional safari planning." data-hi="स्टे की पूछताछ और वैकल्पिक सफारी योजना के साथ छोटी कॉर्बेट यात्रा।">A quick Corbett break with stay enquiry and optional safari planning.</p><div class="price" data-en="Ask for quote" data-hi="कीमत पूछें">Ask for quote</div></div></article>
+    <article class="card"><img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=900&q=80" alt="Deer in green forest"><div class="card-body"><span class="tag" data-en="Popular" data-hi="लोकप्रिय">Popular</span><h3 data-en="2 Nights / 3 Days" data-hi="2 रात / 3 दिन">2 Nights / 3 Days</h3><p data-en="More time to relax, explore nearby places and enquire about safari." data-hi="आराम करने, आसपास घूमने और सफारी के बारे में पूछताछ के लिए अधिक समय।">More time to relax, explore nearby places and enquire about safari.</p><div class="price" data-en="Ask for quote" data-hi="कीमत पूछें">Ask for quote</div></div></article>
+    <article class="card"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80" alt="Sunlit forest"><div class="card-body"><span class="tag" data-en="Custom trip" data-hi="कस्टम यात्रा">Custom trip</span><h3 data-en="Family / Group Tour" data-hi="फैमिली / ग्रुप टूर">Family / Group Tour</h3><p data-en="Tell us your group size, preferred dates and budget for a tailored enquiry." data-hi="अपनी ग्रुप संख्या, पसंदीदा तारीखें और बजट बताएं।">Tell us your group size, preferred dates and budget for a tailored enquiry.</p><div class="price" data-en="Custom quote" data-hi="कस्टम कीमत">Custom quote</div></div></article>
+  </div>
+</div></section>
+
+<section><div class="container"><div class="section-head"><div class="eyebrow">Photo moments</div><h2 data-en="The Corbett feeling" data-hi="कॉर्बेट की खूबसूरती">The Corbett feeling</h2></div>
+  <div class="gallery"><img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1000&q=80" alt="Forest canopy"><img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=800&q=80" alt="Dense green forest"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Mountain landscape"><img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80" alt="River and nature"><img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80" alt="Sunlit trees"></div>
+</div></section>
+
+<section class="booking" id="booking"><div class="container">
+  <div class="section-head"><div class="eyebrow">Let's plan your trip</div><h2 data-en="Send a travel enquiry" data-hi="यात्रा की पूछताछ भेजें">Send a travel enquiry</h2><p data-en="Fill in your details. The form will open WhatsApp with your enquiry ready to send." data-hi="अपनी जानकारी भरें। आपकी पूछताछ WhatsApp में तैयार होकर खुलेगी।">Fill in your details. The form will open WhatsApp with your enquiry ready to send.</p></div>
+  <form class="form" id="enquiryForm">
+    <div class="field"><label for="name" data-en="Your name" data-hi="आपका नाम">Your name</label><input id="name" required placeholder="Name / नाम"></div>
+    <div class="field"><label for="phone" data-en="Mobile number" data-hi="मोबाइल नंबर">Mobile number</label><input id="phone" required inputmode="tel" placeholder="+91"></div>
+    <div class="field"><label for="date" data-en="Travel date" data-hi="यात्रा की तारीख">Travel date</label><input id="date" type="date" required></div>
+    <div class="field"><label for="people" data-en="Number of travellers" data-hi="यात्रियों की संख्या">Number of travellers</label><select id="people"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></div>
+    <div class="field"><label for="service" data-en="What do you need?" data-hi="आपको क्या चाहिए?">What do you need?</label><select id="service"><option>Safari enquiry / सफारी</option><option>Hotel or resort / होटल या रिसॉर्ट</option><option>Complete tour package / पूरा टूर पैकेज</option><option>Local sightseeing / स्थानीय घूमना</option></select></div>
+    <div class="field"><label for="budget" data-en="Approx. budget (optional)" data-hi="अनुमानित बजट (वैकल्पिक)">Approx. budget (optional)</label><input id="budget" placeholder="e.g. ₹10,000"></div>
+    <div class="field full"><label for="message" data-en="Message (optional)" data-hi="मैसेज (वैकल्पिक)">Message (optional)</label><textarea id="message" placeholder="Tell us your plan... / अपनी योजना बताएं..."></textarea></div>
+    <button class="btn" type="submit" data-en="Send Enquiry on WhatsApp" data-hi="WhatsApp पर पूछताछ भेजें">Send Enquiry on WhatsApp</button>
+  </form>
+  <p class="notice" data-en="Demo setup: add your agency WhatsApp number in script.js before publishing. This website collects enquiries only; it does not confirm or issue safari permits." data-hi="डेमो सेटअप: वेबसाइट पब्लिश करने से पहले script.js में अपनी एजेंसी का WhatsApp नंबर डालें। यह वेबसाइट केवल पूछताछ लेती है; सफारी परमिट जारी या कन्फर्म नहीं करती।">Demo setup: add your agency WhatsApp number in script.js before publishing. This website collects enquiries only; it does not confirm or issue safari permits.</p>
+</div></section>
+
+<section id="contact"><div class="container"><div class="section-head"><div class="eyebrow">Get in touch</div><h2 data-en="Contact Corbett Jungle Safari" data-hi="Corbett Jungle Safari से संपर्क करें">Contact Corbett Jungle Safari</h2><p data-en="Add your real business contact details before publishing." data-hi="पब्लिश करने से पहले अपने सही बिज़नेस संपर्क विवरण जोड़ें।">Add your real business contact details before publishing.</p></div>
+  <div class="contact-grid"><div class="contact-panel"><h3 data-en="Contact details" data-hi="संपर्क विवरण">Contact details</h3><p>📍 Ramnagar, Uttarakhand, India</p><p>📞 <span id="displayPhone">Add your phone number</span></p><p>✉️ <span id="displayEmail">Add your email address</span></p><p class="small" data-en="Replace the sample details with your actual business information." data-hi="नमूना विवरण की जगह अपनी वास्तविक जानकारी डालें।">Replace the sample details with your actual business information.</p></div>
+  <div class="contact-panel"><h3 data-en="Useful reminder" data-hi="ज़रूरी जानकारी">Useful reminder</h3><p data-en="Safari permits, zone access, timings and rules can change. Confirm current details through the official Uttarakhand Forest Department / authorised booking portal before taking payment or promising a slot." data-hi="सफारी परमिट, ज़ोन, समय और नियम बदल सकते हैं। भुगतान लेने या स्लॉट का वादा करने से पहले उत्तराखंड वन विभाग / अधिकृत बुकिंग पोर्टल से मौजूदा जानकारी की पुष्टि करें।">Safari permits, zone access, timings and rules can change. Confirm current details through the official Uttarakhand Forest Department / authorised booking portal before taking payment or promising a slot.</p><a href="https://corbettgov.org/" target="_blank" rel="noopener">Official Corbett website ↗</a></div></div>
+</div></section>
+</main>
+<footer><div class="container footer-row"><div><b>Corbett Jungle Safari</b><div class="small">Into the wild · Uttarakhand</div></div><div class="small">© <span id="year"></span> Corbett Jungle Safari. All rights reserved.</div><div class="small"><a href="#home">Back to top ↑</a></div></div></footer>
+<a class="whatsapp" id="waFloat" href="#" target="_blank" rel="noopener">WhatsApp</a>
+<script src="script.js"></script>
+</body></html>
