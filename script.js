@@ -2,8 +2,8 @@
 // 1) Replace WHATSAPP_NUMBER with your WhatsApp number in international format,
 //    digits only. Example for India: 919876543210
 // 2) Replace DISPLAY_PHONE and DISPLAY_EMAIL with your real business contacts.
-const WHATSAPP_NUMBER = "917668586808";
-const DISPLAY_PHONE = "917668586808";
+const WHATSAPP_NUMBER = "91-7668586808";
+const DISPLAY_PHONE = "91-7668586808";
 const DISPLAY_EMAIL = "gr7278327@gmail.com";
 
 document.getElementById("year").textContent = new Date().getFullYear();
