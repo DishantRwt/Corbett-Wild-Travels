@@ -8,7 +8,9 @@ const DISPLAY_EMAIL = "gr7278327@gmail.com";
 
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("displayPhone").textContent = DISPLAY_PHONE;
-document.getElementById("displayEmail").textContent = DISPLAY_EMAIL;
+const emailLink = document.getElementById("displayEmail");
+emailLink.textContent = DISPLAY_EMAIL;
+emailLink.href = "mailto:" + DISPLAY_EMAIL;
 
 const floatLink = document.getElementById("waFloat");
 floatLink.href = `https://wa.me/${WHATSAPP_NUMBER}`;
