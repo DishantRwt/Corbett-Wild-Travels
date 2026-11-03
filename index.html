@@ -195,6 +195,43 @@
 </section>
 
 <section class="booking" id="booking"><div class="container">
+  <section id="reviews">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Customer feedback</div>
+      <h2>Customer Reviews / ग्राहक समीक्षा</h2>
+      <p>Apna safari experience share karein.</p>
+    </div>
+
+    <form class="form" id="reviewForm" onsubmit="sendReviewToWhatsApp(event)">
+      <div class="field">
+        <label for="reviewName">Your Name / आपका नाम</label>
+        <input id="reviewName" type="text" required>
+      </div>
+
+      <div class="field">
+        <label for="reviewRating">Rating / रेटिंग</label>
+        <select id="reviewRating" required>
+          <option value="">Select rating</option>
+          <option value="5">★★★★★ - Excellent</option>
+          <option value="4">★★★★ - Very Good</option>
+          <option value="3">★★★ - Good</option>
+          <option value="2">★★ - Average</option>
+          <option value="1">★ - Poor</option>
+        </select>
+      </div>
+
+      <div class="field full">
+        <label for="reviewMessage">Your Review / अपना अनुभव लिखें</label>
+        <textarea id="reviewMessage" required></textarea>
+      </div>
+
+      <button class="btn" type="submit">Submit Review / समीक्षा भेजें</button>
+    </form>
+
+    <p class="notice">Reviews are published on our website only after approval.</p>
+  </div>
+</section>
   <div class="section-head"><div class="eyebrow">Let's plan your trip</div><h2 data-en="Send a travel enquiry" data-hi="यात्रा की पूछताछ भेजें">Send a travel enquiry</h2><p data-en="Fill in your details. The form will open WhatsApp with your enquiry ready to send." data-hi="अपनी जानकारी भरें। आपकी पूछताछ WhatsApp में तैयार होकर खुलेगी।">Fill in your details. The form will open WhatsApp with your enquiry ready to send.</p></div>
   <form class="form" id="enquiryForm">
     <div class="field"><label for="name" data-en="Your name" data-hi="आपका नाम">Your name</label><input id="name" required placeholder="Name / नाम"></div>
@@ -230,5 +267,27 @@ Get in touch with us for Jim Corbett Safari bookings and enquiries.
 </main>
 <footer><div class="container footer-row"><div><b>Corbett Jungle Safari</b><div class="small">Into the wild · Uttarakhand</div></div><div class="small">© <span id="year"></span> Corbett Jungle Safari. All rights reserved.</div><div class="small"><a href="#home">Back to top ↑</a></div></div></footer>
 <a class="whatsapp" id="waFloat" href="#" target="_blank" rel="noopener">WhatsApp</a>
-<script src="script.js"></script>
+<script>
+function sendReviewToWhatsApp(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("reviewName").value.trim();
+  const rating = document.getElementById("reviewRating").value;
+  const review = document.getElementById("reviewMessage").value.trim();
+
+  if (!name || !rating || !review) {
+    alert("Please fill all fields.");
+    return;
+  }
+
+  const message = `Customer Review - Corbett Jungle Safari
+Name: ${name}
+Rating: ${rating}/5
+Review: ${review}`;
+
+  const url = "https://wa.me/917668586808?text=" + encodeURIComponent(message);
+  window.open(url, "_blank");
+}
+</script>
+  <script src="script.js"></script>
 </body></html>
