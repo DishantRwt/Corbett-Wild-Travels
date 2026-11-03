@@ -61,6 +61,7 @@ document.getElementById("menuBtn").addEventListener("click", () => {
 document.querySelectorAll("#nav a").forEach(a => a.addEventListener("click", () => {
   document.getElementById("nav").classList.remove("open");
 }));
+
 // Gallery lightbox
 document.addEventListener("DOMContentLoaded", () => {
   const galleryLinks = [...document.querySelectorAll(".gallery a")];
