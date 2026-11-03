@@ -61,3 +61,104 @@ document.getElementById("menuBtn").addEventListener("click", () => {
 document.querySelectorAll("#nav a").forEach(a => a.addEventListener("click", () => {
   document.getElementById("nav").classList.remove("open");
 }));
+// Gallery lightbox
+document.addEventListener("DOMContentLoaded", () => {
+  const galleryLinks = [...document.querySelectorAll(".gallery a")];
+  if (!galleryLinks.length) return;
+
+  const images = galleryLinks.map(link => ({
+    src: link.querySelector("img").src,
+    alt: link.querySelector("img").alt
+  }));
+
+  let currentIndex = 0;
+
+  const style = document.createElement("style");
+  style.textContent = `
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.94);
+      z-index: 99999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 55px 65px;
+    }
+    .lightbox.show { display: flex; }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85vh;
+      object-fit: contain;
+    }
+    .lightbox button {
+      position: absolute;
+      border: 0;
+      color: white;
+      background: rgba(255,255,255,.18);
+      cursor: pointer;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 27px;
+    }
+    .lightbox .close { top: 15px; right: 20px; }
+    .lightbox .prev { left: 15px; top: 50%; }
+    .lightbox .next { right: 15px; top: 50%; }
+    .lightbox .counter {
+      position: absolute;
+      bottom: 15px;
+      color: white;
+      font-size: 15px;
+    }
+  `;
+  document.head.appendChild(style);
+
+  const box = document.createElement("div");
+  box.className = "lightbox";
+  box.innerHTML = `
+    <button class="close" aria-label="Close">×</button>
+    <button class="prev" aria-label="Previous photo">‹</button>
+    <img alt="">
+    <button class="next" aria-label="Next photo">›</button>
+    <div class="counter"></div>
+  `;
+  document.body.appendChild(box);
+
+  const bigImage = box.querySelector("img");
+  const counter = box.querySelector(".counter");
+
+  function showImage(index) {
+    currentIndex = (index + images.length) % images.length;
+    bigImage.src = images[currentIndex].src;
+    bigImage.alt = images[currentIndex].alt;
+    counter.textContent = `${currentIndex + 1} / ${images.length}`;
+  }
+
+  function closeBox() {
+    box.classList.remove("show");
+  }
+
+  galleryLinks.forEach((link, index) => {
+    link.addEventListener("click", event => {
+      event.preventDefault();
+      showImage(index);
+      box.classList.add("show");
+    });
+  });
+
+  box.querySelector(".prev").addEventListener("click", () => showImage(currentIndex - 1));
+  box.querySelector(".next").addEventListener("click", () => showImage(currentIndex + 1));
+  box.querySelector(".close").addEventListener("click", closeBox);
+
+  box.addEventListener("click", event => {
+    if (event.target === box) closeBox();
+  });
+
+  document.addEventListener("keydown", event => {
+    if (!box.classList.contains("show")) return;
+    if (event.key === "ArrowRight") showImage(currentIndex + 1);
+    if (event.key === "ArrowLeft") showImage(currentIndex - 1);
+    if (event.key === "Escape") closeBox();
+  });
+});
