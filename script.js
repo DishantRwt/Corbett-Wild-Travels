@@ -7,7 +7,9 @@ const DISPLAY_PHONE = "917668586808";
 const DISPLAY_EMAIL = "gr7278327@gmail.com";
 
 document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("displayPhone").textContent = DISPLAY_PHONE;
+const phoneLink = document.getElementById("displayPhone");
+phoneLink.textContent = DISPLAY_PHONE;
+phoneLink.href = "tel:+917668586808";
 const emailLink = document.getElementById("displayEmail");
 emailLink.textContent = DISPLAY_EMAIL;
 emailLink.href = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(DISPLAY_EMAIL);
