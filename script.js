@@ -10,8 +10,9 @@ document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("displayPhone").textContent = DISPLAY_PHONE;
 const emailLink = document.getElementById("displayEmail");
 emailLink.textContent = DISPLAY_EMAIL;
-emailLink.href = "mailto:" + DISPLAY_EMAIL;
-
+emailLink.href = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(DISPLAY_EMAIL);
+emailLink.target = "_blank";
+emailLink.rel = "noopener noreferrer";
 const floatLink = document.getElementById("waFloat");
 floatLink.href = `https://wa.me/${WHATSAPP_NUMBER}`;
 floatLink.addEventListener("click", (event) => {
