@@ -12,8 +12,11 @@ phoneLink.textContent = DISPLAY_PHONE;
 phoneLink.href = "tel:+917668586808";
 const emailLink = document.getElementById("displayEmail");
 emailLink.querySelector("span").textContent = DISPLAY_EMAIL;
-emailLink.href = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(DISPLAY_EMAIL);
-emailLink.target = "_blank";
+const isMobile = /Android|iPhone|iPad/i.test(navigator.userAgent);
+
+emailLink.href = isMobile
+  ? "mailto:" + DISPLAY_EMAIL
+  : "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(DISPLAY_EMAIL);emailLink.target = "_blank";
 emailLink.rel = "noopener noreferrer";
 const floatLink = document.getElementById("waFloat");
 floatLink.href = `https://wa.me/${WHATSAPP_NUMBER}`;
